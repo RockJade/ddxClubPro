@@ -14,11 +14,11 @@
 
 @import url(css/animate.css);
 @import url(css/jquery.fatNav.min.css);
-@import url(css/flaticon.css);
-@import url(css/prettyPhoto.css);
 @import url(css/owl.carousel.css);
+@import url(css/flaticon.css);
 @import url(css/font-awesome.min.css);
-@import url(css/jquery.gmaps.css);
+/*@import url(css/prettyPhoto.css);
+@import url(css/jquery.gmaps.css);*/
 
 /*------------------------------------------------------------------
     SKELETON
@@ -649,7 +649,7 @@ a img.aligncenter {
   }
 }
 
-/* DEMO 2 */
+/* DEMO 2
 
 .demo-2 {
   background: url(uploads/building-sprite.png) no-repeat -9999px -9999px;
@@ -657,7 +657,7 @@ a img.aligncenter {
 
 .demo-2 .page-view {
   background: url(uploads/building-sprite-2.png) no-repeat -9999px -9999px;
-}
+}*/
 
 .demo-2 .page-view h1 {
   text-transform: uppercase;
@@ -689,7 +689,7 @@ a img.aligncenter {
   background-image: url(uploads/banner-04.jpg);
 }
 
-.demo-2 .page-view .project:nth-child(odd).hide {
+/*.demo-2 .page-view .project:nth-child(odd).hide {
   -webkit-mask: url(uploads/building-sprite.png);
           mask: url(uploads/building-sprite.png);
   -webkit-mask-size: 7500% 100%;
@@ -705,7 +705,7 @@ a img.aligncenter {
           mask-size: 8400% 100%;
   -webkit-animation: mask-play 1.4s steps(83) forwards;
           animation: mask-play 1.4s steps(83) forwards;
-}
+}*/
 
 
 
@@ -2534,6 +2534,12 @@ select.mobile-device {
 .footer-distributed .footer-company-name a:hover{
 	color: #cccccc;
 }
+.footer-distributed .footer-miitbeian a{
+	color: #555555;
+}
+.footer-distributed .footer-miitbeian a:hover{
+	color: #cccccc;
+}
 .main-footer{
 	background: #292929;
 	padding: 70px 0px;
@@ -2922,7 +2928,7 @@ float: left;
 
   /*-- about-bottom --*/
 .about-bottom{
-  background: url(images/a2.jpg) no-repeat 0px 0px;
+  background: url(uploads/actor_img_02.jpg) no-repeat 0px 0px;
   background-size: cover;
   padding:4em 0;
 }
