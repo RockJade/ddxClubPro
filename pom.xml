@@ -81,14 +81,44 @@
 		</dependency>
 	</dependencies>
 
+    <!--压缩-->
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
+	    <pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+				</plugin>
+				<plugin>
+					<groupId>net.alchim31.maven</groupId>
+					<artifactId>yuicompressor-maven-plugin</artifactId>
+					<version>1.5.0</version>
+					<executions>
+						<execution>
+							<phase>prepare-package</phase>
+							<goals>
+								<goal>compress</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<encoding>UTF-8</encoding>
+						<!-- 忽略 js 错误警告 -->
+						<jswarn>false</jswarn>
+						<nosuffix>true</nosuffix>
+						<linebreakpos>-1</linebreakpos>
+						<preProcessAggregates>true</preProcessAggregates>
+	                    <!-- 源目录，即需压缩的根目录 -->
+	                    <sourceDirectory>src/main/webapp</sourceDirectory>
+	                    <!-- 输出目录，即压缩后的目录-->
+	                    <outputDirectory>target/yui</outputDirectory>
+	                    <force>true</force>
+						<includes>
+							<include>style.css</include>
+						</includes>
+					</configuration>
+				</plugin>
+			</plugins>
+	    </pluginManagement>
 	</build>
-
-
 </project>
